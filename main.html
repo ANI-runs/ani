@@ -303,6 +303,62 @@
       </p>
 
     </div>
+    <div style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+">
+
+    <!-- Image -->
+    <img 
+        src="kitty.png"
+        alt="Image"
+        style="
+            width: 320px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        "
+    >
+
+    <!-- Button -->
+    <button 
+        onclick="toggleMusic()"
+        id="musicBtn"
+        style="
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        "
+    >
+        ▶ Play Music
+    </button>
+
+    <!-- Audio -->
+    <audio id="music">
+        <source src="./WhatsApp Audio 2026-05-10 at 21.12.14.mp4" type="audio/mpeg">
+    </audio>
+
+</div>
+
+<script>
+    const music = document.getElementById("music");
+    const btn = document.getElementById("musicBtn");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            btn.innerHTML = "⏸ Pause Music";
+        } else {
+            music.pause();
+            btn.innerHTML = "▶ Play Music";
+        }
+    }
+</script>
 
   </section>
 
