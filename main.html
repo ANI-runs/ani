@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Happy 6 Months Karthika 💖</title>
+
+ 
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+ 
+
+  <style>
+
+    body {
+
+      overflow-x: hidden;
+
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+ 
+
+    .fade-in {
+
+      animation: fadeIn 0.6s ease forwards;
+
+    }
+
+ 
+
+    @keyframes fadeIn {
+
+      from {
+
+        opacity: 0;
+
+        transform: translateY(10px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+      }
+
+    }
+
+ 
+
+    .floating {
+
+      animation: float 3s ease-in-out infinite;
+
+    }
+
+ 
+
+    @keyframes float {
+
+      0%,100% { transform: translateY(0px); }
+
+      50% { transform: translateY(-10px); }
+
+    }
+
+  </style>
+
+</head>
+
+ 
+
+<body class="bg-gradient-to-b from-pink-100 via-rose-50 to-white text-gray-800">
+
+ 
+
+  <!-- Hello Kitty Watermark -->
+
+  <div class="fixed inset-0 flex items-center justify-center opacity-10 pointer-events-none z-0">
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_Kitty_Character_portrait.png"
+
+      class="w-[700px] floating">
+
+  </div>
+
+ 
+
+  <!-- HERO -->
+
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative z-10">
+
+    <h1 class="text-5xl md:text-7xl font-black text-rose-600 mb-6">
+
+      Happy 6 Months Karthika 💖
+
+    </h1>
+
+ 
+
+    <p class="text-lg md:text-2xl max-w-3xl leading-relaxed">
+
+      Since 11th November, somehow every normal day started feeling warmer.
+
+    </p>
+
+ 
+
+    <div class="mt-8 bg-white/70 backdrop-blur-md border border-pink-200 rounded-3xl shadow-2xl p-6">
+
+      <p class="text-xl italic">
+
+        “Half a year later and you're still my favorite person.”
+
+      </p>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- PHOTO GALLERY -->
+
+  <section class="py-20 px-6 relative z-10">
+
+    <h2 class="text-4xl font-bold text-center text-rose-600 mb-14">
+
+      Us 📸
+
+    </h2>
+
+ 
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+ 
+
+      <img src="photo1.jpg"
+
+        class="rounded-3xl shadow-2xl hover:scale-105 transition-all duration-300 w-full h-[420px] object-cover">
+
+ 
+
+      <img src="photo2.jpg"
+
+        class="rounded-3xl shadow-2xl hover:scale-105 transition-all duration-300 w-full h-[420px] object-cover">
+
+ 
+
+      <img src="photo3.jpg"
+
+        class="rounded-3xl shadow-2xl hover:scale-105 transition-all duration-300 w-full h-[420px] object-cover">
+
+ 
+
+      <img src="photo4.jpg"
+
+        class="rounded-3xl shadow-2xl hover:scale-105 transition-all duration-300 w-full h-[420px] object-cover">
+
+ 
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- GAME -->
+
+  <section class="py-24 px-6 text-center relative z-10">
+
+ 
+
+    <h2 class="text-5xl font-black text-rose-600 mb-10">
+
+      Hello Kitty vs Batman 🎮
+
+    </h2>
+
+ 
+
+    <div id="gameBox"
+
+      class="max-w-3xl mx-auto bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-2xl border border-pink-200 p-10 relative overflow-hidden">
+
+ 
+
+      <!-- Dynamic Photo Background -->
+
+      <div id="photoBg" class="absolute inset-0 hidden">
+
+        <img id="bgImage"
+
+          class="w-full h-full object-cover blur-sm scale-110 opacity-30">
+
+      </div>
+
+ 
+
+      <div class="relative z-10">
+
+ 
+
+        <div class="text-7xl mb-6 floating">
+
+          🐱💖 ⚔️ 🦇
+
+        </div>
+
+ 
+
+        <h3 id="levelTitle" class="text-3xl font-bold mb-4"></h3>
+
+ 
+
+        <p id="taskText" class="text-lg opacity-80 mb-8"></p>
+
+ 
+
+        <button id="actionBtn"
+
+          class="bg-rose-500 hover:bg-rose-600 text-white px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:scale-110 transition-all duration-300">
+
+          Defeat Batman 🦇
+
+        </button>
+
+ 
+
+        <div id="messageBox" class="hidden fade-in mt-8">
+
+          <div class="bg-white/70 backdrop-blur-md border border-pink-300 rounded-3xl p-8 text-xl shadow-2xl">
+
+            <p id="messageText"></p>
+
+          </div>
+
+ 
+
+          <button id="nextBtn"
+
+            class="mt-8 bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105">
+
+            Next Level ✨
+
+          </button>
+
+        </div>
+
+ 
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- ENDING -->
+
+  <section class="py-24 px-6 text-center relative z-10">
+
+ 
+
+    <h2 class="text-5xl font-black text-rose-600 mb-8">
+
+      To Karthika 🌸
+
+    </h2>
+
+ 
+
+    <div class="max-w-3xl mx-auto bg-white rounded-[2rem] p-10 shadow-2xl border border-pink-100">
+
+      <p class="text-xl leading-loose">
+
+        Thank you for making love feel simple instead of complicated.
+
+        Thank you for becoming part of my everyday life so naturally.
+
+        Thank you for every small moment that slowly became important.
+
+      </p>
+
+ 
+
+      <p class="mt-8 text-2xl font-bold text-rose-500">
+
+        Happy 6 Months ❤️
+
+      </p>
+
+    </div>
+
+  </section>
+
+ 
+
+  <footer class="py-10 text-center opacity-60 text-sm">
+
+    built with love, sleep deprivation and questionable coding decisions 😭
+
+  </footer>
+
+ 
+
+  <script>
+
+    const levels = [
+
+      {
+
+        title: "Level 1 — Hello Kitty vs Batman 🐱🦇",
+
+        task: "Help Hello Kitty dodge Batman by clicking the button!",
+
+        message: "you have made me realise that u make things special",
+
+        image: "photo1.jpg"
+
+      },
+
+      {
+
+        title: "Level 2 — Gotham Hearts 💖",
+
+        task: "Batman is jealous because Hello Kitty keeps winning 😭",
+
+        message: "we proved love isnt just making love or showing romance, it is every minute we spend as 2 individual",
+
+        image: "photo2.jpg"
+
+      },
+
+      {
+
+        title: "Level 3 — Sweet Chaos ✨",
+
+        task: "Collect all the hearts before Batman steals them",
+
+        message: "we proved love is simple but sweet",
+
+        image: "photo3.jpg"
+
+      },
+
+      {
+
+        title: "Level 4 — Veerappan Arc 😭",
+
+        task: "Defeat rude Batman energy once and for all",
+
+        message: "i still cant get over veerappan and stop being like rude",
+
+        image: "photo4.jpg"
+
+      },
+
+      {
+
+        title: "Final Level — Home ❤️",
+
+        task: "One final click before the ending",
+
+        message: "i have never felt like ive put extra work to be with you because every extra mile with you feels like home",
+
+        image: "photo1.jpg"
+
+      }
+
+    ];
+
+ 
+
+    let current = 0;
+
+ 
+
+    const levelTitle = document.getElementById("levelTitle");
+
+    const taskText = document.getElementById("taskText");
+
+    const actionBtn = document.getElementById("actionBtn");
+
+    const messageBox = document.getElementById("messageBox");
+
+    const messageText = document.getElementById("messageText");
+
+    const nextBtn = document.getElementById("nextBtn");
+
+    const photoBg = document.getElementById("photoBg");
+
+    const bgImage = document.getElementById("bgImage");
+
+ 
+
+    function loadLevel() {
+
+      levelTitle.innerText = levels[current].title;
+
+      taskText.innerText = levels[current].task;
+
+ 
+
+      messageBox.classList.add("hidden");
+
+      actionBtn.style.display = "inline-block";
+
+ 
+
+      photoBg.classList.add("hidden");
+
+    }
+
+ 
+
+    actionBtn.onclick = () => {
+
+      messageText.innerText = levels[current].message;
+
+ 
+
+      bgImage.src = levels[current].image;
+
+      photoBg.classList.remove("hidden");
+
+ 
+
+      messageBox.classList.remove("hidden");
+
+      actionBtn.style.display = "none";
+
+ 
+
+      if (current === levels.length - 1) {
+
+        nextBtn.innerText = "Forever ❤️";
+
+      }
+
+    };
+
+ 
+
+    nextBtn.onclick = () => {
+
+      if (current < levels.length - 1) {
+
+        current++;
+
+        loadLevel();
+
+      }
+
+    };
+
+ 
+
+    loadLevel();
+
+  </script>
+
+ 
+
+</body>
+
+</html>
+
+ 
