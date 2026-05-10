@@ -1,160 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body{
-       background: linear-gradient(135deg, #fdd1d6, #f7a8b8);
-    height: 100vh;
+    background: linear-gradient(135deg, #fdd1d6, #f7a8b8);
+    min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    font-family: "Poppins", sans-serif;}
+
+    font-family: "Poppins", sans-serif;
+
+    position: relative;
+}
+
+/* Title */
 #happy-birthday {
     position: absolute;
-    top: 20px;           /* distance from top */
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
+
     font-size: 40px;
     font-weight: 700;
-    color: rgb(223, 67, 67);        /* change as you like */
+    color: rgb(223, 67, 67);
+
     z-index: 999;
 }
 
+/* Main container */
 .block1{
-    height: 650px;
     width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    border-radius: 20px;
-   
-    }
 
-    @keyframes borderGlow {
-        0%   { box-shadow: 0 0 0px #F7A8B8; }
-        100% { box-shadow: 0 0 20px #F7A8B8; }
+    gap: 40px;
+    flex-wrap: wrap;
+
+    padding: 20px;
 }
-.hint,.login {
+
+/* Hint + Login Card */
+.hint,
+.login{
     width: 350px;
+    min-height: 250px;
+
     padding: 25px;
+
     border-radius: 18px;
-    color:white;
+
+    color: white;
+
     background: rgba(255, 255, 255, 0.25);
+
     backdrop-filter: blur(12px);
 
     box-shadow: 0 8px 20px rgba(247, 168, 184, 0.4);
 
-    transition: 0.1s;
+    transition: 0.3s;
+
+    position: relative;
+
+    overflow: hidden;
 }
 
-/* Hover lift */
-.hint,.login:hover {
+/* Hover */
+.hint:hover,
+.login:hover{
     transform: translateY(-5px);
+
     box-shadow: 0 12px 28px rgba(247, 168, 184, 0.55);
 }
 
-.hint,.login h2 {
-    text-align: center;
-    font-size: 28px;
-    color: white;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-
-.flip-inner {
+/* Flip Card */
+.flip-inner{
     width: 100%;
-    height: 100%;
+    height: 200px;
+
     position: relative;
+
     transition: transform 0.6s;
+
     transform-style: preserve-3d;
 }
 
-.front, .back {
+.front,
+.back{
     position: absolute;
+
     width: 100%;
     height: 100%;
+
     backface-visibility: hidden;
+
     border-radius: 12px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-size: 20px;
+
+    text-align: center;
+    padding: 20px;
 }
 
-/* Front side */
-.front {
+/* Front */
+.front{
     background: #F7A8B8;
     color: white;
 }
 
-/* Back side (hint) */
-.back {
+/* Back */
+.back{
     background: white;
+    color: #333;
+
     border: 2px solid #F7A8B8;
-    transform: rotateY(180deg);
-}
-.flip {
+
     transform: rotateY(180deg);
 }
 
+.flip{
+    transform: rotateY(180deg);
+}
 
+/* Inputs */
 .name{
     font-size: 15px;
     font-weight: bold;
     color: #333;
 }
 
-input {
+input{
     width: 100%;
+
     padding: 12px;
+
     font-size: 15px;
+
     margin-top: 6px;
     margin-bottom: 18px;
+
     border: 2px solid #d1d1d1;
+
     border-radius: 10px;
+
     transition: 0.3s;
 }
 
-input:focus {
+input:focus{
     border-color: #6a5acd;
+
     box-shadow: 0 0 6px rgba(106, 90, 205, 0.4);
+
     outline: none;
 }
-.heart {
+
+/* Button */
+button{
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff5c8a;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #ff3d73;
+}
+
+/* Hearts */
+.heart{
     position: fixed;
+
     width: 20px;
     height: 20px;
+
     background: red;
+
     transform: rotate(45deg);
+
     bottom: -20px;
+
     animation: floatUp linear forwards;
+
+    pointer-events: none;
+
+    z-index: -1;
 }
 
 .heart::before,
-.heart::after {
+.heart::after{
     content: "";
+
     position: absolute;
+
     width: 20px;
     height: 20px;
+
     background: inherit;
+
     border-radius: 50%;
 }
 
-.heart::before {
+.heart::before{
     top: -10px;
     left: 0;
 }
 
-.heart::after {
+.heart::after{
     left: -10px;
     top: 0;
 }
 
-@keyframes floatUp {
-    from {
+@keyframes floatUp{
+
+    from{
         transform: translateY(0) rotate(45deg);
         opacity: 1;
     }
 
-    to {
+    to{
         transform: translateY(-110vh) rotate(45deg);
         opacity: 0;
     }
