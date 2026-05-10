@@ -10,7 +10,14 @@ html,body{
 }
 
 body{
-    background: linear-gradient(135deg, #fdd1d6, #f7a8b8);
+    background: linear-gradient(
+        135deg,
+        #120018,
+        #2b0a3d,
+        #4a0d67,
+        #1a001f
+    );
+
     min-height: 100vh;
 
     display: flex;
@@ -20,9 +27,9 @@ body{
     font-family: "Poppins", sans-serif;
 
     position: relative;
-}
 
-/* Title */
+    overflow-x: hidden;
+}/* Title */
 #happy-birthday {
     position: absolute;
     top: 20px;
