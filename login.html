@@ -53,18 +53,22 @@ function nextPage() {
     </div>
     </div>
 <script>
-function createBalloon() {
-  const colors = ["red", "blue", "yellow", "purple", "pink", "orange"];
-  let b = document.createElement("div");
-  b.className = "balloon";
-  b.style.left = Math.random() * 100 + "vw";
-  b.style.background = colors[Math.floor(Math.random()*colors.length)];
-  b.style.animationDuration = 4 + Math.random() * 6 + "s";
-  document.body.appendChild(b);
+function createHeart() {
+    const colors = ["red", "pink", "hotpink", "deeppink", "purple"];
 
-  setTimeout(() => b.remove(), 10000);
+    let h = document.createElement("div");
+    h.className = "heart";
+
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.background = colors[Math.floor(Math.random() * colors.length)];
+    h.style.animationDuration = 4 + Math.random() * 6 + "s";
+
+    document.body.appendChild(h);
+
+    setTimeout(() => h.remove(), 10000);
 }
-setInterval(createBalloon, 200);
+
+setInterval(createHeart, 200);
 </script>
 </body>
 </html>
