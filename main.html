@@ -308,33 +308,20 @@
     align-items: center;
     min-height: 100vh;
 ">
-
-    <!-- Image -->
-    <img 
+ <img 
         src="kitty.png"
-        alt="Image"
+        alt="Play Music"
+        onclick="document.getElementById('music').play()"
         style="
             width: 320px;
             border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        "
-    >
-
-    <!-- Button -->
-    <button 
-        onclick="toggleMusic()"
-        id="musicBtn"
-        style="
-            margin-top: 20px;
-            padding: 12px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 50px;
             cursor: pointer;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            transition: 0.3s;
         "
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'"
     >
-        ▶ Play Music
-    </button>
 
     <!-- Audio -->
     <audio id="music">
@@ -343,20 +330,6 @@
 
 </div>
 
-<script>
-    const music = document.getElementById("music");
-    const btn = document.getElementById("musicBtn");
-
-    function toggleMusic() {
-        if (music.paused) {
-            music.play();
-            btn.innerHTML = "⏸ Pause Music";
-        } else {
-            music.pause();
-            btn.innerHTML = "▶ Play Music";
-        }
-    }
-</script>
 
   </section>
 
